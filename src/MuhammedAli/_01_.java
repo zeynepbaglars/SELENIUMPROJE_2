@@ -32,8 +32,9 @@ public class _01_ extends BaseDriver {
                 .sendKeys(Keys.ENTER).build().perform();
 
         WebElement msg = driver.findElement(By.xpath("//div[@class='result']"));
-        Assert.assertTrue("Hesap oluşturulamadı..!!",msg.getText().contains("Your registration completed"));
+        Assert.assertTrue("Hesap oluşturulamadı..!!", msg.getText().contains("Your registration completed"));
 
         BekleVeKapat();
     }
+}
 
