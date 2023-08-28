@@ -16,6 +16,7 @@ public class _oturumkapatma extends BaseDriver {
 
         WebElement mail = driver.findElement(By.id("Email"));
         mail.sendKeys("Asudebaykal1@gmail.com");
+        MyFunc.Bekle(1);
 
         WebElement sifre = driver.findElement(By.id("Password"));
         sifre.sendKeys("Asude123");
