@@ -1,6 +1,5 @@
 package MuhammedAli;
 
-
 import Utlity.BaseDriver;
 import Utlity.MyFunc;
 import org.junit.Assert;
@@ -10,11 +9,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import static Utlity.BaseDriver.driver;
-
-public class _01_ extends BaseDriver {
+public class _02_ extends BaseDriver {
     @Test
-    public void Test_US_01() {
+    public void Test_US_02(){
         driver.get("https://demowebshop.tricentis.com/");
         WebElement register = driver.findElement(By.xpath("//a[text()='Register']"));
         register.click();
@@ -31,9 +28,9 @@ public class _01_ extends BaseDriver {
                 .sendKeys("Asude123").sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).build().perform();
 
-        WebElement msg = driver.findElement(By.xpath("//div[@class='result']"));
-        Assert.assertTrue("Hesap oluşturulamadı..!!",msg.getText().contains("Your registration completed"));
+        WebElement msg = driver.findElement(By.xpath("//div[@class='validation-summary-errors']/ul/li"));
+        Assert.assertTrue("Hesap oluşturuldu..!!",msg.getText().contains("The specified email already exists"));
 
         BekleVeKapat();
     }
-
+}
