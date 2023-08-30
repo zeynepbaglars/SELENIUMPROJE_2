@@ -26,7 +26,7 @@ public class _01_ extends BaseDriver {
         actions.click(gender).sendKeys(Keys.TAB)
                 .sendKeys("Asude").sendKeys(Keys.TAB)
                 .sendKeys("Baykal").sendKeys(Keys.TAB)
-                .sendKeys("Asudebaykal123@gmail.com").sendKeys(Keys.TAB)
+                .sendKeys("Asudebaykal1239@gmail.com").sendKeys(Keys.TAB)
                 .sendKeys("Asude123").sendKeys(Keys.TAB)
                 .sendKeys("Asude123").sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).build().perform();
