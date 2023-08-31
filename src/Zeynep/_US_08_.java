@@ -26,13 +26,11 @@ public class _US_08_ extends BaseDriver {
         WebElement sifre = driver.findElement(By.id("Password"));
         sifre.sendKeys("asudeniben1");
         MyFunc.Bekle(2);
-
         WebElement sub = driver.findElement(By.xpath("//input[@value='Log in']"));
         sub.click();
         MyFunc.Bekle(5);
 
         //sipariş verme
-
         WebElement books = driver.findElement(By.xpath("(//a[@href='/books'])[1]"));
         books.click();
         wait.until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/books"));
