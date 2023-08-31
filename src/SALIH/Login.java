@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 public class Login extends BaseDriver {
     @Test
     public void Selenium(){
-      /*  driver.get("https://demowebshop.tricentis.com/");
+        driver.get("https://demowebshop.tricentis.com/");
 
         WebElement login= driver.findElement(By.className("ico-login"));
         login.click();
@@ -33,15 +33,14 @@ public class Login extends BaseDriver {
         MyFunc.Bekle(2);
 
 
-        //WebElement Loginbtn= driver.findElement(By.cssSelector("[class='button-1 login-button']"));
-        //Loginbtn.click();
 
 
 
 
-        BekleVeKapat();*/
+
+        BekleVeKapat();
     }
-    /*@Test
+    @Test
     public void TC_0401A(){
         driver.get("https://demowebshop.tricentis.com/");
 
@@ -58,8 +57,8 @@ public class Login extends BaseDriver {
         Assert.assertTrue("Test Başarısız",msg.getText().contains("Login was unsuccessful."));
 
         BekleVeKapat();
-    }*/
-   /* @Test
+    }
+    @Test
     public void TC_0402B(){
         driver.get("https://demowebshop.tricentis.com/");
         MyFunc.Bekle(2);
@@ -110,7 +109,7 @@ public class Login extends BaseDriver {
         Assert.assertTrue("Test Başarısız",msg.getText().contains("Login was unsuccessful."));
 
         BekleVeKapat();
-    }*/
+    }
     @Test
     public void TC_0401D(){
         driver.get("https://demowebshop.tricentis.com/");
