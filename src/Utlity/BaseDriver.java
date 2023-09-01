@@ -1,6 +1,8 @@
 package Utlity;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,15 +31,31 @@ public class BaseDriver {
         MyFunc.Bekle(5);
         driver.quit();
     }
+    public static void login(){
+        driver.get("https://demowebshop.tricentis.com/");
+
+        WebElement login= driver.findElement(By.className("ico-login"));
+        login.click();
+        MyFunc.Bekle(2);
+
+        WebElement email= driver.findElement(By.id("Email"));
+        email.sendKeys("selaniumteam9@gmail.com");
+        MyFunc.Bekle(2);
+
+        WebElement password= driver.findElement(By.id("Password"));
+        password.sendKeys("Seleniumteam9");
+        MyFunc.Bekle(2);
+
+        WebElement remember= driver.findElement(By.id("RememberMe"));
+        remember.click();
+        MyFunc.Bekle(2);
+
+        WebElement Loginbtn= driver.findElement(By.xpath("//input[@class='button-1 login-button']"));
+        Loginbtn.click();
+        MyFunc.Bekle(2);
+
+    }
 
 }
 
 
-//  Java hızlı - Web sitesi yavaş
-// java elemanı bulmaya çalışıyor, ama web sitesi hala yuklenıyor. site yüklenmeden java bulamadım dıyor bıtırıyor,
-// Web elementı bulmaya calıstıgında (FindElement/s)
-//  çözüm 1 : biraz süre vereceğiz (20s)
-
-//  Thread.sleep(); -> javayı direkt verilen süre kadar durdurur. kac sanıye verırsen o kadar durdurur programı. Osebeple bu işimize yaramıyor. Bize buldugu zaman cıksın yanı mesela 20 sn verdık 10. sanıyede java buldun cık, 20 sn beklemesın ısterız
-//         bıde bu Thread.sleep ıyı kod degıldır mulakatta bundan bahsetme mesela.
-//  bunun yerıne driver.manage yapıp bunu MyFunc a atıcam oradan cagırıyorum her seferınde yazmayayım dıye
