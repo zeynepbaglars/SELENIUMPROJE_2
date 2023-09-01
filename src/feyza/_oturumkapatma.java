@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class _oturumkapatma extends BaseDriver {
     @Test
-    public void Test(){
+    public void Test() {
         driver.get("https://demowebshop.tricentis.com/");
         WebElement LogIn = driver.findElement(By.xpath("//a[@href='/login']"));
         LogIn.click();
@@ -34,4 +34,6 @@ public class _oturumkapatma extends BaseDriver {
 
         Assert.assertTrue("Çıkış işlemi başarısız", register.isDisplayed());
 
-        BekleVeKapat();}}
+        BekleVeKapat();
+    }
+}
